@@ -1,11 +1,23 @@
 /* #### General Components ##### */
 
+@import url(./header.css);
+
 :root {
   --background-color: #E5E5E5;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.flex-container-left {
+  justify-content: start;
+  gap: 24px;
+}
+
+.flex-container-right {
+  justify-content: end;
+  gap: 8px;
 }
 
