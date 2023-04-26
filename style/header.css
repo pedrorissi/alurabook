@@ -1,10 +1,8 @@
 .header {
+  background-color: var(--white);
   display: flex;
-  justify-content: space-around;
-  gap: 100px;
-  max-width: 380px;
+  justify-content: space-between;
   height: 48;
-  padding: 1rem 1.5rem;
 }
 
 .header__burger-menu {
@@ -14,6 +12,15 @@
   background-repeat: no-repeat;
   background-position: center;
   display: inline-block;
+  padding: 1rem; 
+}
+
+.header__burger-menu:hover,
+.header__checkbox-button:checked ~ * .header__burger-menu {
+  background-image: url(../assets/opened-burger.png);
+  background-color: #1e3b50;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .header .flex-container {
@@ -24,11 +31,39 @@
   display: none;
   position: absolute;
   top: 100%;
-  
+
 }
 
-.header__checkbox-button:checked ~ .header__category-list{
+.header__checkbox-button:checked ~ .header__category-list {
   display: block;
   
 }
+
+.header .flex-container #menu {
+  display: none;
+}
+
+.header__list-title,
+.header__list-item {
+  padding: 1em;
+  background-color: var(--white);
+}
+
+.header__list-title {
+  color: var(--orange);
+  font-family: 'Poppins', sans-serif;;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.header .header__category-list .header__list-item {
+  font-family: 'Poppins', sans-serif;;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #326589;
+  line-height: 1.5rem;
+}
+
+
 

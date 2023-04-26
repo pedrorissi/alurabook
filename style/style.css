@@ -1,23 +1,32 @@
 /* #### General Components ##### */
 
 @import url(./header.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
   --background-color: #E5E5E5;
+  --white: #FFF;
+  --orange: #EB9B00;
+}
+
+body {
+  background-color: var(--background-color);
 }
 
 .flex-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .flex-container-left {
-  justify-content: start;
   gap: 24px;
 }
 
 .flex-container-right {
-  justify-content: end;
   gap: 8px;
 }
 
+a {
+  text-decoration: none;
+}
