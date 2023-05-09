@@ -15,13 +15,22 @@
   padding: 1rem; 
 }
 
-.header__burger-menu:hover,
-.header__checkbox-button:checked ~ * .header__burger-menu {
+.header__checkbox-button:checked ~ * .header__burger-menu,
+.header .flex-container span:hover {
   background-image: url(../assets/opened-burger.png);
-  background-color: #1e3b50;
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.header .flex-container label:hover,
+.header__checkbox-button:checked ~ label 
+{
+  background:var(--blue-gradient);
+}
+
+/* .header__checkbox-button:checked ~ * .header__burger-menu {
+  z-index: 2;
+} */
 
 .header .flex-container {
   position: relative;
@@ -31,7 +40,7 @@
   display: none;
   position: absolute;
   top: 100%;
-
+  width: 60vw;
 }
 
 .header__checkbox-button:checked ~ .header__category-list {
@@ -56,12 +65,12 @@
   font-weight: 700;
 }
 
-.header .header__category-list .header__list-item {
+.header .header__category-list .header__list-item a{
   font-family: 'Poppins', sans-serif;;
   font-size: 1rem;
   font-weight: 400;
   text-transform: uppercase;
-  color: #326589;
+  color: var(--blue-gradient);
   line-height: 1.5rem;
 }
 
